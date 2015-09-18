@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 // Worked with the amazing Tabitha Mayabi!
 public class calculator{
-  
-
   //mod
   public static void mod(int a, int b){
     int resultMod;
@@ -29,7 +27,7 @@ public class calculator{
     System.out.println("The result of " + a + "^" + b + " is: " + resultPower);
   }
   //average
-  public static void average(float a, float b){
+  public static void average(int a, int b){
     double aveResult = add(a, b)/2;
     System.out.println("Average is: " + aveResult);
   }
@@ -60,6 +58,7 @@ public class calculator{
     int num1, num2;
     System.out.println("Welcome!\n What do you want to do?\n1.Add 2.Subtract\n3.Multiply  4.Divide\n5.Modulus 6.Average\n7.Squareroot 8.Power\n");
     int choice = Integer.parseInt(in.nextLine());
+    if(!(choice<1|choice>8)){
     if(choice==7){
       System.out.println("Enter Number to Find Square Root Of...");
       num1 = Integer.parseInt(in.nextLine());
@@ -81,6 +80,10 @@ public class calculator{
 
         default: System.out.println("Please Enter Valid Choice (1->8)"); break;
       }
+    }
+    }
+    else {
+    System.out.println("Wrong Choice \n Please Select the Above Options!");
     }
 //break label;
   }
